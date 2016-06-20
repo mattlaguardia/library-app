@@ -2,7 +2,7 @@ module SessionsHelper
 
   ## this is where we will place our helper methods for our sessions controller ##
   def login(user)
-    session[:user_id] = user.idea
+    session[:user_id] = user.id
     @current_user = user
   end
 

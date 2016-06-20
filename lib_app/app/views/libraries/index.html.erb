@@ -1,0 +1,11 @@
+<h1>Here is the index of all the libraries!</h1>
+
+<!-- now we need to iterate over all of them and render all the libraries to the page -->
+<% @libraries.each do |library| %>
+<div>
+  <h3><%= library.name %></h3>
+  <% if @current_user %>
+    <%= button_to 'Join', library_user_path(library) %>
+    <% end %>
+</div>
+<% end %>
